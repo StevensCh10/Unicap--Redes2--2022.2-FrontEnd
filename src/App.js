@@ -4,21 +4,14 @@ import Projects from './components/pages/Projects';
 import User from './components/pages/User';
 import NewProject from './components/pages/NewProject';
 import Container from './components/layout/Container';
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
 
   return ( //className
     <Router>
-      <div>
-        <ul>
-          <Link to='/'>Home</Link>
-          <Link to='/projects'>Projetos</Link>
-          <Link to='/NewProject'>Novo Projeto</Link>
-          <Link to='/user'>User</Link>
-        </ul>
-      </div>
-
-      <Container customClass='min-height'>
+      <Navbar/>
 
         <Routes>
             <Route path='/' element={<Home/>}/>
@@ -27,8 +20,7 @@ function App() {
             <Route path='/user' element={<User/>} />
         </Routes>
 
-      </Container>
-      <p>Footer</p>
+      <Footer/>
     </Router>
   );
 }
