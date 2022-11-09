@@ -5,13 +5,15 @@ import styles from './Navbar.module.css'
 
 function Navbar(){
     return(
-        <nav>
-            <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/projects'>Projetos</Link></li>
-                <li><Link to='/user'>User</Link></li>
-            </ul>
-      </nav>
+        <Container>
+            <nav className={styles.navbar}>
+                <ul className={styles.list}>
+                    <li className={styles.item}><Link to='/'>Home</Link></li>
+                    <li className={styles.item}><Link to='/projects'>Projects</Link></li>
+                    <li className={styles.item}><Link to='/user'>User</Link></li>
+                </ul>
+            </nav>
+        </Container>
     )
 }
 
