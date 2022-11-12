@@ -1,9 +1,12 @@
-import Login from'./components/pages/Login'
+import RoutesApp from "./routes"
+import {AuthProvider} from "./contexts/auth"
 
 function App() {
 
   return ( //className
-    <Login/>
+    <AuthProvider>
+      <RoutesApp/>
+    </AuthProvider>
   );
 }
 
